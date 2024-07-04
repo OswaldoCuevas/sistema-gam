@@ -1,0 +1,25 @@
+<div class="flex flex-column align-items-center" >
+    <div class="flex flex-column w-12 sm:w-10 md:10 lg:10 row-gap-2">
+      <app-formulario-patrocinadores class="w-full"></app-formulario-patrocinadores>
+      <p-card header="Lista de patrocinador" [style]="{ width: '100%' }">
+        <p-table [value]="patrocinadores" [tableStyle]="{ 'min-width': '50rem' }">
+          <ng-template pTemplate="header">
+              <tr>
+                  <th>Code</th>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Quantity</th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-patrocinador>
+              <tr>
+                  <td><i class="pi pi-ellipsis-v"></i></td>
+                  <td>{{ patrocinador.nombre }}</td>
+                  <td>{{ patrocinador.contacto }}</td>
+                  <td>{{ patrocinador.telefono }}</td>
+              </tr>
+          </ng-template>
+      </p-table>
+      </p-card>
+    </div>
+</div>
